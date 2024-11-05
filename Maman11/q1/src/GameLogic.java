@@ -27,10 +27,26 @@ public class GameLogic {
        }
        return bulllsCount;
    }
-   public  String Output(int arr[]){
+   public  String Output(int arr[]){// bulls- exact place, cows- not the exact place
+        int bullsCount = 0 , cowsCount = 0;
+
+        int[] guess = arr;
+        int[] code= {1,2,3,4};
 
 
-      return ("Cows: "+ Cows(arr) + ", Bulls: "+ Bulls(arr) +".");
+       for (int i = 0; i < guess.length; i++) {
+           for (int j = 0; j < code.length; j++) {
+               if(i==j&& guess[i] == code[j]){ // bullls
+                   bullsCount++;
+               } else if (i!= j && guess[i] == code[j] ) {
+                   cowsCount++;
+               }
+           }
+
+       }
+
+
+      return ("Bulls: "+ bullsCount + ", Cows: "+cowsCount +".");
 
    }
 
