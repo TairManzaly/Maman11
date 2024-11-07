@@ -6,32 +6,32 @@ public class GameLogic {
         this.num = num;
     }
 
-    private int Cows(int[ ] guess){
-       int hitsCount = 0;
-       for (int i = 0 ; i < num.length ; i++){
-           if(num[i] == guess[i]) hitsCount++;
-       }
-       return hitsCount;
-
-   }
-
-   private  int Bulls(int[] guess){
-       int bulllsCount = 0;
-       for (int i = 0; i < num.length; i++) {
-           for (int j = 0; j < guess.length; j++){
-
-               if(i!=j && num[i] == guess[j]) bulllsCount++;
-
-           }
-
-       }
-       return bulllsCount;
-   }
+//    private int Cows(int[ ] guess){
+//       int hitsCount = 0;
+//       for (int i = 0 ; i < num.length ; i++){
+//           if(num[i] == guess[i]) hitsCount++;
+//       }
+//       return hitsCount;
+//
+//   }
+//
+//   private  int Bulls(int[] guess){
+//       int bulllsCount = 0;
+//       for (int i = 0; i < num.length; i++) {
+//           for (int j = 0; j < guess.length; j++){
+//
+//               if(i!=j && num[i] == guess[j]) bulllsCount++;
+//
+//           }
+//
+//       }
+//       return bulllsCount;
+  // }
    public  String Output(int arr[]){// bulls- exact place, cows- not the exact place
         int bullsCount = 0 , cowsCount = 0;
 
         int[] guess = arr;
-        int[] code= {1,2,3,4};
+        int[] code = num;
 
 
        for (int i = 0; i < guess.length; i++) {
